@@ -22,4 +22,45 @@ DATABASE MODELING
  - 물리적 데이터 모델링
 
 
+ 개념적 데이터 모델링
+-> 업무파악 된 일의 데이터 간 관계를 구상하는 단계
+   ERD를 사용 해 각 개체와 그들간의 관계를 나타낸다.
+
+   Entity (개체)
+   -> 관리하고자 하는 정보의 실체이며
+      정의하고자 하는 사물 또는 개념을 의미한다.
+      DB의 table로 사용된다.
+
+   Attribute (엔티티 속성)
+   -> Entity의 구성요소로써
+      DB의 column으로 사용된다.
+
+   Relation (관계)
+   -> Entity 간의 관계(연관성)를 표현한 것.
+      DB에서 PK, FK로 표현한다.
+
+
+        Cardinality
+        -> 각 Entity 간 관계에는 여러가지 형태가 존재하며
+           이러한 관계의 형태를 나타낸 것이 Cardinality이다.
+
+           - 1 : 1 관계
+           - 1 : N 관계
+           - N : M 관계 (다대다관계)
+
+    ERD (Entity RElationship Diagram)
+    -> 요구분석사항에서 얻은 엔티티와 속성들의 관계를 그림으로 표현한 것이다.
+
+    피터 챈 표기법으로 ERD 구성 방법
+    Entity는 사각형
+    Attribute는 원형
+    Relation은 마름모 꼴로 표기한다.
+
+
+
+
+
+    
+
+
 
