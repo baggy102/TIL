@@ -1,7 +1,7 @@
 // Typescript 함수 타입 정의
 
 // 함수
-function add(num1: number, num2: number): number {
+function add1(num1: number, num2: number): number {
   return num1 + num2;
 }
 
@@ -48,15 +48,16 @@ interface User {
   name: string;
 }
 
-const Sam: User = { name: "Sam" };
+// const Sam: User = { name: "Sam" };
 
-function showNmae(this: User) {
-  console.log(this.name);
-}
-const a = showName.bind(Sam);
-a();
+// function showName(this: User) {
+//   console.log(this.name);
+// }
+// const a = showName.bind(Sam);
+// a();
 
 // 매개변수가 존재할 때
+export {};
 const Tom: User = { name: "Tom" };
 
 function showName(this: User, age: number, gender: "m" | "f") {
