@@ -1,0 +1,130 @@
+JSON
+
+자바스크립트 객체 문법으로 구조화된 데이터 교환 형식, python, javascript, java 등
+여러 언어에서 데이터 교환형식으로 쓰이며 객체문법 이외에 단순 배열, 문자열도 표현 가능
+
+
+Javascript 객체 문법
+key, value
+
+
+JSON 파일을 통해 javascript 기반으로 로직을 구축하기위해서
+javascript object로 변환을 해주어야 한다.
+이 때 사용하는 함수
+JSON.parse
+이다.
+
+{
+	key: value,
+	key: value
+}
+
+여러 객체를 표현할 때는 
+[ {}, {} ]
+배열 형식으로 표현한다. (JSON array)
+
+{
+	"name" : "baggy",
+	"age" : "29"
+}
+
+~.name	// baggy
+
+{
+	"name" : {
+		"firstname" : "giho"
+		"lastname" : "Bae"
+},
+	"age" : "29"
+}
+
+
+2. 데이터 교환형식
+
+데이터는 추상적인 아이디어에서부터 시작해 구체적인 측정에 이르기까지 다양한 의미로 사용
+실험, 조사, 관찰 등으로 부터 얻은 사실이나 자료 등을 의미한다.
+
+예를들어
+데이터를 교환할 때
+JOSN이라는 양식에 맞춰서 줘라
+즉, JSON은 데이터 교환 양식의 일종이다.
+
+
+3. 여러 언어에서의 쓰임
+
+객체, 해시테이블, 딕셔너리 등으로 변환되어 쓰임.
+Ex. json in javascript = javascript object
+json in python = dict
+
+여러 언어에서 '독립적'으로 쓰임
+
+
+4. 단순 배열, 문자열 표현
+[1,2,3,4]
+"파카파카파카"
+
+위와 같이 표현 가능하다.
+
+But. key, value 형태로 쓰이는것이 일반적이다.
+
+
+< 스키마?
+하나의 타입
+data를 주고받을 때
+어떤 때는 string,
+어떤 때는 number로 입력된다고 했을 때
+타입에 대한 Typechecking logig이 필요할 것이다.
+또는 추가적인 로직이 필요할것이다.
+
+이러한 ~를 줄이고자
+데이터 타입을 통일시켜주는 것이 중요하다. >
+
+
+JSON의 타입
+
+javascript object와 유사하지만
+undefined, 메서드 등을 포함하지 않는다.
+ - 수 (number)
+ - 문자열 (string)
+ - 참/거짓 (boolean)
+ - 배열 (Array)
+ - 객체 (Object)
+ - null
+
+자바스크립트에서는
+
+const a = {
+	"a" : () => {
+		console.log(1)
+	},
+	"b" : undefined
+}
+
+console.log(a)
+와 같이 가능하다.
+
+
+JSON 직렬화, 역직렬화
+
+직렬화란 외부의 시스템에서도 사용할 수 있도록 바이트(byte) 형태로
+데이터를 변환하는 기술이며 역직렬화는 이 반대를 의미한다.
+
+JSON.parse()	// 역직렬화
+JSON.stringify()
+
+JSON을 javascript에서는 JSON.parse 통해 javascript object로 변환 시켜야한다.
+
+if. JSON을 받아 javascript로 로직을 구성했는데
+이를 다시 python으로 넘겨주기 위해서는 어떻게 해야할까
+
+이를 JSON으로 구성해 다시 python에 넘겨다 주어야한다.
+
+즉, 다른 외부의 시스템에서 활용할 수 있도록 '직렬화' 과정을 거쳐야한다.
+
+javascript object는 JSON.stringify 파일을 통해
+"문자열"로 변환된다.
+
+JSON의 활용 
+JSON은 프로그래밍 언어와 프레임워크 등에 독립적이므로,
+서로 다른 시스템간에 데이터를 교환하기에 용이하다.
+주로 API의 반환형태, 시스템을 구성하는 설정파일에 활용됩니다.
