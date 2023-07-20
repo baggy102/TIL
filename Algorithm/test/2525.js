@@ -4,15 +4,14 @@ const input = require("fs").readFileSync("example.txt").toString().trim().split(
 
 // const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
 
-let H = parseInt(input[0].split(" ")[0]);
-let M = parseInt(input[0].split(" ")[1]) + parseInt(input[1]);
+let A = parseInt(input[0].split(" ")[0]);
+let B = parseInt(input[0].split(" ")[1]);
+let C = parseInt(input[1]);
 
-if (M >= 60) {
-  if (H + M / 60 > 23) {
-    console.log(parseInt(H + M / 60 - 24), M % 60);
-  } else {
-    console.log(parseInt(H + M / 60), M % 60);
-  }
-} else {
-  console.log(H, M);
+H = Math.floor((A * 60 + B + C) / 60);
+M = (B + C) % 60;
+if (H >= 24) {
+  H -= 24;
 }
+
+console.log(H, M);
