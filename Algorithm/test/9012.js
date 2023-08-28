@@ -22,5 +22,5 @@ for (let i = 1; i < input.length; i++) {
 }
 
 console.log(result.join("\n"));
-console.log(result);
-console.log(input);
+// console.log(result);
+// console.log(input);
