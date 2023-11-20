@@ -201,13 +201,19 @@ AWS 에서는 이를 Amazon Simple Queue Service(Amazon SQS)와 Amazon Simple No
   
 	컨테이너 관리를 지원하기 위한 서비스
 	- Amazon Elastic Container Service (ECS)
+   
 		AWS에서 컨테이너식 애플리케이션을 실행, 확장할 수 있는 확장성이 뛰어난 컨테이너 관리 시스템
+
 		ECS는 애플리케이션을 신속하게 구축, 테스트 배포할 수 있는 플랫폼인 Docker 컨테이너를 지원
 	- Amazon Elastic Kubernetes Service (EKS)
+   
 		AWS에서 Kubernetes를 실행하는 데 사용할 수 있는 완전관리형 서비스이다.
 	- AWS Fargate
+   
 		컨테이너 용 서버리스 컴퓨팅 플랫폼
+
 		Amazon EKS와 Amazon ECS에서 작동한다.
+
 		Fargate는 자동으로 서버 인프라를 관리한다.
 
 </details>
