@@ -1,4 +1,73 @@
 # TIL 
+## 자료구조
+<details>
+<summary>Stack</summary>
+
+<!-- summary 아래 한칸 공백 두어야함 -->
+#### 스택(stack)
+
+> 스택은 가장 마지막으로 들어간 데이터가 가장 첫 번째로 나오는 후입선출(LIFO, Last In First Out)을 가진 자료구조이다.
+재귀적인 함수, 알고리즘에 사용되며 웹 브라우저 방문 기록 등에 쓰인다.
+
+<img width="675" alt="image" src="https://github.com/baggy102/TIL/assets/127190426/698b94c4-06b1-4984-bc1e-f7b319b42717">
+
+#### 시간복잡도
+>- n 번째 참조 : O(n)
+- 가장 앞 부분 참조 : O(1)
+- 탐색 : O(n)
+- 삽입 / 삭제(n번째 제외) : O(1)
+
+<br/>
+
+#### JavaScript로 구현하기
+
+```
+class Stack {
+  top = null;
+  count = 0;
+    
+  push(data) {
+    const node = new Node(data);
+    node.next = this.top;
+    this.top = node;
+    return ++this.count;
+  }
+    
+  pop() {
+    if (!this.top) { // stack underflow 방지
+      return false;
+    }
+    const data = this.top.data;
+    this.top = this.top.next;
+    // 예전 this.top의 메모리 정리
+    this.count--;
+    return data;
+  }
+
+  stackTop() {
+    return this.top.data;
+  }
+}
+```
+
+```
+class Node {
+  next = null;
+  constructor(data) {
+    this.data = data;
+  }
+}
+```
+<br/>
+
+```
+* stack overflow 와 stack underflow란
+각각 주어진 스택 메모리보다 데이터를 더 넣거나,
+스택 메모리가 비어있는데 데이터를 꺼내려 했을 때
+발생하는 에러이다.
+```
+</details>
+
 
 ## AWS
 
