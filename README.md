@@ -11,12 +11,6 @@
 
 <img width="675" alt="image" src="https://github.com/baggy102/TIL/assets/127190426/698b94c4-06b1-4984-bc1e-f7b319b42717">
 
-#### 시간복잡도
->- n 번째 참조 : O(n)
-- 가장 앞 부분 참조 : O(1)
-- 탐색 : O(n)
-- 삽입 / 삭제(n번째 제외) : O(1)
-
 <br/>
 
 #### JavaScript로 구현하기
